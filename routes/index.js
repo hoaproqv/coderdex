@@ -156,7 +156,7 @@ router.put("/:id", function (req, res, next) {
     const data = database.data;
     data.forEach((pkm, index) => {
       if (pkm.id === pkmId) {
-        data[index] = body;
+        data[index] = { ...pkm, ...body };
       }
     });
     database.data = data;
