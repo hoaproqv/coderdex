@@ -73,17 +73,17 @@ router.post("/", function (req, res, next) {
     const { body } = req;
     const { name, id, url_image, type_1, type_2 } = body;
     if (!name || !id || !url_image || !type_1) {
-      throw new Error("Name, ID, Image or Type 1 must be provided");
+      throw new Error("name, id, url_image and type_1 must be provided");
     }
 
     if (!pokemonTypes.includes(type_1)) {
       throw new Error(
-        "Type must be bug, dragon, fairy, fire, ghost, ground, normal, psychic, steel, dark, electric, fighting, flying, grass, ice, poison, rock, water",
+        "type_1 must be bug, dragon, fairy, fire, ghost, ground, normal, psychic, steel, dark, electric, fighting, flying, grass, ice, poison, rock, water",
       );
     }
     if (type_2 && !pokemonTypes.includes(type_2)) {
       throw new Error(
-        "Type must be bug, dragon, fairy, fire, ghost, ground, normal, psychic, steel, dark, electric, fighting, flying, grass, ice, poison, rock, water",
+        "type_2 must be bug, dragon, fairy, fire, ghost, ground, normal, psychic, steel, dark, electric, fighting, flying, grass, ice, poison, rock, water or empty",
       );
     }
     const database = JSON.parse(fs.readFileSync("db.json", "utf8"));
