@@ -146,7 +146,7 @@ router.put("/:id", function (req, res, next) {
         "type_1 must be bug, dragon, fairy, fire, ghost, ground, normal, psychic, steel, dark, electric, fighting, flying, grass, ice, poison, rock, water",
       );
     }
-    if (type_2 && !pokemonTypes.includes(type_2)) {
+    if (type_2 !== "NA" && !pokemonTypes.includes(type_2)) {
       throw new Error(
         "type_2 must be bug, dragon, fairy, fire, ghost, ground, normal, psychic, steel, dark, electric, fighting, flying, grass, ice, poison, rock, water or empty",
       );
