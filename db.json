@@ -14403,9 +14403,22 @@
         {
             "id": "721",
             "name": "volcanion",
-            "url_image": "721.png",
+            "height": "17",
+            "weight": "195",
             "type_1": "fire",
-            "type_2": "water"
+            "type_2": "water",
+            "attack": "110",
+            "defense": "120",
+            "hp": "80",
+            "special_attack": "130",
+            "special_defense": "90",
+            "speed": "70",
+            "ability_1": "water-absorb",
+            "ability_2": "NA",
+            "ability_hidden": "NA",
+            "generation_id": "6",
+            "evolves_from_species_id": "NA",
+            "url_image": "https://res.cloudinary.com/dinzblou9/image/upload/v1691657349/pokemon/721.png"
         },
         {
             "id": "722",
