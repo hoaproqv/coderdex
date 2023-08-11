@@ -36,7 +36,7 @@ router.get("/", function (req, res, next) {
     let data = database.data;
     if (filterName) {
       const newData = data.filter((pkm) =>
-        pkm.pokemon.toLowerCase().includes(filterName.toLowerCase()),
+        pkm.name.toLowerCase().includes(filterName.toLowerCase()),
       );
       data = newData;
     }
